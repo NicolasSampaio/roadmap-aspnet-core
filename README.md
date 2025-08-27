@@ -9,6 +9,8 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 ### **Módulo 1: C# e .NET Basics**
 **Conceitos do Roadmap:**
 - Learn the Basics of C#
+- C#
+- .NET
 - .NET CLI
 - General Development Skills
 - Data Structures and Algorithms
@@ -22,361 +24,371 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
    - *Requisitos: Endpoints para +, -, *, / com validação de entrada*
    - *Aprende: Manipulação de dados, validação, múltiplos endpoints*
 
-**Meta:** Dominar sintaxe C#, conceitos OOP e criar primeiras APIs simples.
+**Meta:** Dominar sintaxe C#, conceitos .NET e criar primeiras APIs simples.
 
 ---
 
-### **Módulo 2: ASP.NET Core Fundamentals**
+### **Módulo 2: Version Control & HTTP**
 **Conceitos do Roadmap:**
-- ASP.NET Core
-- Minimal APIs
-- Routing
-- Middlewares
-- Filters & Attributes
-- Options Pattern
+- Git - Version Control
+- GitHub, GitLab, BitBucket
+- HTTP / HTTPs Protocol
 
 **Desafios Práticos:**
 1. **Echo API** - API que espelha dados recebidos
    - *Requisitos: Endpoint POST que retorna exatamente o que recebe no body*
-   - *Aprende: Routing, middleware pipeline, deserialização JSON*
+   - *Aprende: HTTP methods, request/response, versionamento Git*
 
 2. **Password Checker Service** - Validador de força de senhas
    - *Requisitos: Validar comprimento, caracteres especiais, maiúsculas/minúsculas*
-   - *Aprende: Lógica de validação complexa, regex, responses customizados*
+   - *Aprende: HTTP status codes, validation, Git workflow*
 
-**Meta:** Entender arquitetura ASP.NET Core, roteamento e middleware.
+**Meta:** Entender HTTP protocol e controle de versão.
 
 ---
 
-### **Módulo 3: HTTP & Web APIs**
+### **Módulo 3: ASP.NET Core Fundamentals**
 **Conceitos do Roadmap:**
+- ASP.NET Core Basics
+- MVC
 - REST
-- JSON APIs
-- gRPC
-- GraphQL
+- Razor Pages
+- Razor Components
+- Middlewares
+- Filters and Attributes
+- App Settings and Configs
+- Minimal APIs
 
 **Desafios Práticos:**
 1. **Temperature Converter API** - Conversor de temperatura
    - *Requisitos: Converter Celsius/Fahrenheit/Kelvin, diferentes endpoints para cada conversão*
-   - *Aprende: REST design, status codes HTTP, documentação Swagger*
+   - *Aprende: REST design, middlewares, app settings*
 
 2. **Weather API** - API do clima integrada
-   - *Requisitos: Integração com API externa de clima, cache de 30min*
-   - *Aprende: HttpClient, integração externa, tratamento de erros, cache básico*
+   - *Requisitos: Integração com API externa de clima, configurações via appsettings*
+   - *Aprende: Filters, attributes, external API integration*
 
-**Meta:** Dominar REST, HTTP status codes e documentação de APIs.
+**Meta:** Dominar fundamentos ASP.NET Core e arquitetura REST.
 
 ---
 
-## 🚀 **FASE 2: DESENVOLVIMENTO INTERMEDIÁRIO (Junior Level)**
+## 🚀 **FASE 2: DADOS E PERSISTÊNCIA (Junior Level)**
 
-### **Módulo 4: Banco de Dados & Entity Framework**
+### **Módulo 4: Database Fundamentals**
 **Conceitos do Roadmap:**
+- Database Fundamentals
+- SQL Basics
+- Database Design Basics
+- Stored Procedures
+- Constraints
+- Triggers
+
+**Desafios Práticos:**
+1. **Todo List API** - Lista de tarefas com SQL raw
+   - *Requisitos: CRUD com SQL raw, stored procedures, constraints*
+   - *Aprende: SQL fundamentals, database design, triggers*
+
+**Meta:** Dominar SQL e design de banco de dados.
+
+---
+
+### **Módulo 5: Object Relational Mapping**
+**Conceitos do Roadmap:**
+- Object Relational Mapping
 - Entity Framework Core
-- Relational Databases
-- Search Engines
-- NoSQL Databases
-- Cloud Databases
+- Code First + Migrations
+- Lazy, Eager, Explicit Loading
+- Change Tracker API
+- Dapper
+- NHibernate
 
 **Desafios Práticos:**
-1. **Todo List API** - Lista de tarefas com persistência
-   - *Requisitos: CRUD completo, Entity Framework, SQL Server, migrations*
-   - *Aprende: EF Core, Code First, LINQ, relacionamentos 1:N*
+1. **User Profile API** - Perfis de usuário com EF Core
+   - *Requisitos: Code First, migrations, relacionamento 1:1, lazy/eager loading*
+   - *Aprende: EF Core, migrations, loading strategies*
 
-2. **User Profile API** - Perfis de usuário
-   - *Requisitos: Usuários com perfis, relacionamento 1:1, soft delete*
-   - *Aprende: Relacionamentos complexos, soft delete, data annotations*
+2. **Blog API** - API de blog com Dapper
+   - *Requisitos: Posts, comentários, implementação com Dapper para performance*
+   - *Aprende: Micro ORM, performance tuning, Change Tracker*
 
-**Meta:** Integrar banco de dados, usar EF Core e entender mapeamento objeto-relacional.
+**Meta:** Dominar ORMs e estratégias de carregamento de dados.
 
 ---
 
-### **Módulo 5: Autenticação & Segurança**
-**Conceitos do Roadmap:**
-- Authentication
-- Authorization
-- Identity
-- IdentityServer
-- Auth0
-- SAML
-- OAuth
-- JWT
-- Basic Authentication
-
-**Desafios Práticos:**
-1. **Authentication Service** - Serviço de autenticação JWT
-   - *Requisitos: Login/registro, JWT tokens, refresh tokens, hash de senhas*
-   - *Aprende: ASP.NET Core Identity, JWT, bcrypt, authorization headers*
-
-2. **Password Generator Service** - Gerador de senhas seguras
-   - *Requisitos: Gerar senhas com critérios customizáveis, endpoint protegido*
-   - *Aprende: Autorização por roles, geração criptográfica segura*
-
-**Meta:** Implementar autenticação JWT, autorização e conceitos de segurança.
-
----
-
-### **Módulo 6: Comunicação & Background Services**
-**Conceitos do Roadmap:**
-- Real-Time Communication
-- SignalR
-- Background Tasks
-- HangFire
-- Native BackgroundService
-- Hosted Services
-
-**Desafios Práticos:**
-1. **Email Service** - Serviço de envio de emails
-   - *Requisitos: Envio via SMTP, templates HTML, fila de emails*
-   - *Aprende: SMTP, templates Razor, background services, filas*
-
-2. **Real-time Chat API** - Chat em tempo real
-   - *Requisitos: SignalR, salas de chat, histórico de mensagens*
-   - *Aprende: SignalR, WebSockets, real-time communication*
-
-**Meta:** Implementar comunicação externa e serviços em background.
-
----
-
-### **Módulo 7: APIs Complexas & Dependency Injection**
+### **Módulo 6: Dependency Injection**
 **Conceitos do Roadmap:**
 - Dependency Injection
-- Service Locator
+- Life Cycles
+- DI Containers
+- Microsoft.Extensions
 - Scrutor
-- Autofac
-- Ninject
+- AutoFac
+- Scoped
+- Transient
+- Singleton
 
 **Desafios Práticos:**
-1. **E-commerce API** - API de e-commerce completa
-   - *Requisitos: Produtos, categorias, carrinho, pedidos, usuários autenticados*
-   - *Aprende: Dependency Injection, Service Pattern, relacionamentos N:N*
+1. **E-commerce API** - API com DI completa
+   - *Requisitos: Services com diferentes lifetimes, AutoFac container*
+   - *Aprende: DI patterns, service lifetimes, container configuration*
 
-2. **Blog API** - API de blog com comentários
-   - *Requisitos: Posts, comentários aninhados, tags, paginação*
-   - *Aprende: Relacionamentos complexos, paginação, queries otimizadas*
-
-**Meta:** Desenvolver APIs complexas com múltiplas entidades e relacionamentos.
+**Meta:** Implementar injeção de dependência profissional.
 
 ---
 
-## 🏗️ **FASE 3: DEVOPS & CONTAINERIZAÇÃO (Junior Level)**
+## 🔧 **FASE 3: PERFORMANCE E COMUNICAÇÃO (Middle Level)**
 
-### **Módulo 8: Testing**
+### **Módulo 7: Caching**
 **Conceitos do Roadmap:**
-- Unit Testing
-- Integration Testing
-- Behavior Testing
-- E2E Testing
-- Performance Testing
-- xUnit
-- NUnit
-- MSTest
-- FluentAssertions
-- Bogus
-- Respawn
-- WebApplicationFactory
-- SpecFlow
-- LightBDD
-- NBomber
-
-**Desafios Práticos:**
-1. **Unit Testing** - Implementar testes unitários
-   - *Requisitos: Testes para services, repositories, 80%+ coverage*
-   - *Aprende: xUnit, FluentAssertions, mocking com Moq*
-
-2. **Integration Testing** - Testes de integração  
-   - *Requisitos: Testes com banco real, WebApplicationFactory, cenários E2E*
-   - *Aprende: TestServer, banco de testes, cleanup de dados*
-
-**Meta:** Implementar testes em todos os níveis da aplicação.
-
----
-
-### **Módulo 9: Logging & Monitoring**
-**Conceitos do Roadmap:**
-- Logging
-- Serilog
-- NLog
-- Log4Net
-- Monitoring
-- Health Checks
-- Watchdog
-
-**Desafios Práticos:**
-1. **Logging Service** - Sistema de logs estruturados
-   - *Requisitos: Serilog, logs em arquivo/console/base, níveis diferentes*
-   - *Aprende: Structured logging, sinks, enrichers*
-
-2. **Health Checks** - Implementar health checks
-   - *Requisitos: Health checks para banco, APIs externas, custom checks*
-   - *Aprende: Health check middleware, dependency monitoring*
-
-**Meta:** Implementar observabilidade básica nas aplicações.
-
----
-
-## 🔧 **FASE 4: ARQUITETURA AVANÇADA (Middle Level)**
-
-### **Módulo 10: Caching**
-**Conceitos do Roadmap:**
-- Memory Caching
-- Distributed Caching
+- Caching
+- Memory Cache
+- Entity Framework 2nd Level Cache
+- Distributed Cache
 - Redis
-- MemCached
+- Memcached
 
 **Desafios Práticos:**
 1. **Distributed Caching API** - Cache distribuído com Redis
-   - *Requisitos: Cache de dados caros, invalidação, Redis como store*
-   - *Aprende: IDistributedCache, Redis, cache strategies*
+   - *Requisitos: Memory cache local, Redis distribuído, EF 2nd level cache*
+   - *Aprende: Cache strategies, Redis, performance optimization*
 
-**Meta:** Otimizar performance com diferentes estratégias de caching.
+**Meta:** Implementar diferentes níveis de caching.
 
 ---
 
-### **Módulo 11: Message Brokers & Containerização**
+### **Módulo 8: Databases Advanced**
 **Conceitos do Roadmap:**
-- Message Brokers
-- RabbitMQ
-- Apache Kafka
-- ActiveMQ
-- Azure Service Bus
-- NetMQ
-- Containerization
-- Docker
-- Docker Compose
+- Databases
+- Relational (SQL Server, PostgreSQL, MariaDB, MySQL)
+- NoSQL (MongoDB, Cassandra, LiteDB, CouchDB)
+- Cloud (Cosmos DB, Dynamo DB)
+- Search Engines (Elastic Search, Solr, Sphinx)
 
 **Desafios Práticos:**
-1. **Message Queues** - Sistema de filas com RabbitMQ
-   - *Requisitos: Producer/consumer, dead letter queue, retry policies*
-   - *Aprende: RabbitMQ, MassTransit, message patterns*
+1. **Multi-Database API** - API com SQL Server + MongoDB
+   - *Requisitos: Dados relacionais no SQL Server, logs no MongoDB*
+   - *Aprende: Multi-database architecture, NoSQL patterns*
 
-2. **Container Docker Compose** - Orquestração completa
-   - *Requisitos: API + Redis + RabbitMQ + PostgreSQL em containers*
-   - *Aprende: Docker Compose, networking, volumes, secrets*
+2. **Search API** - API de busca com Elasticsearch
+   - *Requisitos: Indexação automática, busca full-text, agregações*
+   - *Aprende: Search engines, indexing, query optimization*
 
-**Meta:** Implementar comunicação assíncrona e containerização.
+**Meta:** Trabalhar com diferentes tipos de banco de dados.
 
 ---
 
-### **Módulo 12: Object Mapping & API Documentation**
+### **Módulo 9: Logging**
+**Conceitos do Roadmap:**
+- Log Frameworks
+- Serilog
+- NLog
+
+**Desafios Práticos:**
+1. **Logging Service** - Sistema de logs estruturados
+   - *Requisitos: Serilog, logs em arquivo/console/database, diferentes sinks*
+   - *Aprende: Structured logging, log levels, sinks configuration*
+
+**Meta:** Implementar logging profissional.
+
+---
+
+### **Módulo 10: API Communication**
+**Conceitos do Roadmap:**
+- API Clients and Communication
+- REST
+- GraphQL
+- GraphQL .NET
+- HotChocolate
+- gRPC
+
+**Desafios Práticos:**
+1. **GraphQL API** - Implementação GraphQL com HotChocolate
+   - *Requisitos: Queries, mutations, subscriptions, schema stitching*
+   - *Aprende: GraphQL schema design, resolvers, subscriptions*
+
+2. **gRPC Service** - Serviço gRPC
+   - *Requisitos: Proto definitions, streaming, interceptors*
+   - *Aprende: gRPC protocols, performance, binary communication*
+
+**Meta:** Implementar diferentes protocolos de comunicação.
+
+---
+
+## 🌐 **FASE 4: REAL-TIME E INTEGRAÇÃO (Middle-Senior Level)**
+
+### **Módulo 11: Real-Time Communication**
+**Conceitos do Roadmap:**
+- Real-Time Communication
+- Web Sockets
+- SignalR Core
+
+**Desafios Práticos:**
+1. **Real-time Chat API** - Chat em tempo real
+   - *Requisitos: SignalR Core, salas de chat, histórico de mensagens*
+   - *Aprende: SignalR hubs, groups, real-time broadcasting*
+
+**Meta:** Implementar comunicação em tempo real.
+
+---
+
+### **Módulo 12: Object Mapping**
 **Conceitos do Roadmap:**
 - Object Mapping
 - AutoMapper
-- Mapster
-- ExpressMapper
-- API Documentation
-- Swagger
-- NSwag
-- API Versioning
+- Mapperly
+- Manual Mapping
 
 **Desafios Práticos:**
 1. **Advanced E-commerce API** - E-commerce com AutoMapper
-   - *Requisitos: DTOs mapeados, diferentes perfis de mapeamento*
-   - *Aprende: AutoMapper, DTOs, separation of concerns*
+   - *Requisitos: DTOs complexos, perfis de mapeamento, validação*
+   - *Aprende: AutoMapper profiles, custom resolvers, performance*
 
-2. **API Versioning** - Versionamento de APIs  
-   - *Requisitos: V1 e V2 da mesma API, diferentes estratégias de versionamento*
-   - *Aprende: API versioning, backward compatibility, deprecation*
-
-**Meta:** Implementar mapeamento de objetos e documentação profissional de APIs.
+**Meta:** Implementar mapeamento de objetos eficiente.
 
 ---
 
-## 🎯 **FASE 5: ARQUITETURA SÊNIOR (Senior Level)**
-
-### **Módulo 13: Task Scheduling & Serialization**
+### **Módulo 13: Task Scheduling**
 **Conceitos do Roadmap:**
 - Task Scheduling
-- BackgroundService
-- Hosted Services
-- Serialization
-- Newtonsoft.Json
-- System.Text.Json
-- Protobuf-net
+- Native Background Service
+- Hangfire
+- Quartz
+- Coravel
 
 **Desafios Práticos:**
-1. **Task Scheduling API** - Agendamento com HangFire
+1. **Task Scheduling API** - Agendamento com Hangfire
    - *Requisitos: Jobs recorrentes, fire-and-forget, delayed jobs, dashboard*
-   - *Aprende: HangFire, background jobs, cron expressions*
+   - *Aprende: Background services, job scheduling, monitoring*
 
-2. **Notification Service API** - Multi-formato (JSON/XML/Protobuf)
-   - *Requisitos: Mesmo endpoint retorna diferentes formatos baseado no Accept header*
-   - *Aprende: Content negotiation, different serializers*
-
-**Meta:** Implementar agendamento de tarefas e diferentes formatos de serialização.
+**Meta:** Implementar processamento em background.
 
 ---
 
-### **Módulo 14: Microservices Architecture**
+## 🧪 **FASE 5: TESTING E QUALIDADE (Senior Level)**
+
+### **Módulo 14: Testing**
+**Conceitos do Roadmap:**
+- Testing
+- XUnit
+- NUnit
+- MSTest
+- Shouldly
+- NSubstitute
+- Moq
+- FakeItEasy
+- AutoFixture
+- Bogus
+- WebApplicationFactory
+- Test Containers
+- Respawn
+- Specflow
+- Light BDD
+- Playwright
+- Puppeteer
+- Cypress
+
+**Desafios Práticos:**
+1. **Comprehensive Testing** - Suite de testes completa
+   - *Requisitos: Unit tests (XUnit), Integration tests (WebApplicationFactory), E2E (Playwright)*
+   - *Aprende: Test pyramids, mocking strategies, test containers*
+
+2. **BDD Testing** - Behavior Driven Development
+   - *Requisitos: SpecFlow scenarios, living documentation*
+   - *Aprende: BDD patterns, executable specifications*
+
+**Meta:** Implementar testing em todos os níveis.
+
+---
+
+## 🏗️ **FASE 6: MICROSERVICES E ARQUITETURA (Senior Level)**
+
+### **Módulo 15: Microservices**
 **Conceitos do Roadmap:**
 - Microservices
-- Building Message Bus
-- MassTransit
+- ActiveMQ
+- Kafka
+- RabbitMQ
+- Azure Service Bus
+- Mass Transit
 - NServiceBus
 - EasyNetQ
+- Ocelot
+- YARP
 
 **Desafios Práticos:**
-1. **Microservices E-commerce API** - E-commerce em microserviços
-   - *Requisitos: User Service, Product Service, Order Service, API Gateway*
-   - *Aprende: Service-to-service communication, distributed transactions*
+1. **Microservices E-commerce** - E-commerce em microserviços
+   - *Requisitos: User Service, Product Service, Order Service, API Gateway (YARP)*
+   - *Aprende: Service decomposition, API Gateway patterns*
 
-2. **Event-Driven API** - Arquitetura orientada a eventos
-   - *Requisitos: Domain events, event handlers, eventual consistency*
-   - *Aprende: Domain events, event sourcing básico, CQRS introduction*
+2. **Event-Driven Architecture** - Arquitetura orientada a eventos
+   - *Requisitos: RabbitMQ + MassTransit, event sourcing, saga patterns*
+   - *Aprende: Message brokers, event-driven patterns, distributed transactions*
 
-**Meta:** Implementar arquitetura de microserviços com message bus.
+**Meta:** Implementar arquitetura de microserviços completa.
 
 ---
 
-### **Módulo 15: CQRS & Templating**
+### **Módulo 16: Cloud & CI/CD**
 **Conceitos do Roadmap:**
-- CQRS
+- Cloud
+- Docker
+- Kubernetes
+- Orleans
+- Dapr
+- CI / CD
+- GitHub Actions
+- Azure Pipelines
+- GitLab CI/CD
+- Circle CI
+
+**Desafios Práticos:**
+1. **Containerization & Orchestration** - Deploy com K8s
+   - *Requisitos: Docker containers, Kubernetes deployment, health checks*
+   - *Aprende: Container orchestration, scaling, monitoring*
+
+2. **CI/CD Pipeline** - Pipeline completo
+   - *Requisitos: GitHub Actions, automated testing, deployment*
+   - *Aprende: DevOps practices, automation, deployment strategies*
+
+**Meta:** Implementar deployment e orquestração cloud-native.
+
+---
+
+## 🎨 **FASE 7: FRAMEWORKS AVANÇADOS (Expert Level)**
+
+### **Módulo 17: Template Engines & Frameworks**
+**Conceitos do Roadmap:**
+- Template Engines (Razor, Scriban, Fluid)
+- Frameworks (Blazor, .NET MAUI)
+
+**Desafios Práticos:**
+1. **CMS API** - Sistema de gerenciamento de conteúdo
+   - *Requisitos: Templates dinâmicos com Scriban, admin panel com Blazor*
+   - *Aprende: Template engines, hybrid applications*
+
+**Meta:** Integrar template engines e frameworks modernos.
+
+---
+
+### **Módulo 18: Software Architecture**
+**Conceitos do Roadmap:**
+- Software Design and Architecture
 - MediatR
 - FluentValidation
-- Scrutor
-- Templating Engines
-- Razor
-- DotLiquid
-- Scriban
-- Fluid
+- Polly
+- Marten
+- Scalar
 
 **Desafios Práticos:**
-1. **CQRS Event Sourcing API** - CQRS completo com MediatR
-   - *Requisitos: Commands/Queries separados, Event Store, read/write models*
-   - *Aprende: MediatR, CQRS pattern, event sourcing, FluentValidation*
+1. **CQRS Event Sourcing API** - Arquitetura CQRS completa
+   - *Requisitos: MediatR, FluentValidation, Marten event store, Polly resilience*
+   - *Aprende: CQRS, Event Sourcing, resilience patterns*
 
-2. **Multi-tenant API** - API multi-inquilino
-   - *Requisitos: Tenant isolation, shared schema, tenant-specific features*
-   - *Aprende: Multi-tenancy patterns, data isolation, tenant resolution*
+2. **Multi-tenant SaaS API** - SaaS multi-inquilino
+   - *Requisitos: Tenant isolation, feature flags, billing integration*
+   - *Aprende: Multi-tenancy, SaaS patterns, distributed systems*
 
-**Meta:** Implementar padrão CQRS e sistemas de templates.
-
----
-
-### **Módulo 16: Client-Side Technologies & Advanced APIs**
-**Conceitos do Roadmap:**
-- Client-Side .NET
-- Blazor Server
-- Blazor WebAssembly  
-- .NET MAUI
-- GraphQL
-- API Gateway & Service Mesh
-- Distributed Tracing
-
-**Desafios Práticos:**
-1. **GraphQL API** - Implementação GraphQL completa
-   - *Requisitos: Queries, mutations, subscriptions, schema stitching*
-   - *Aprende: Hot Chocolate, GraphQL schema design, resolvers*
-
-2. **API Gateway & Service Mesh** - Gateway com roteamento
-   - *Requisitos: Ocelot/YARP, rate limiting, circuit breaker, load balancing*
-   - *Aprende: API Gateway patterns, service mesh, resilience patterns*
-
-3. **Distributed Tracing API** - Observabilidade avançada
-   - *Requisitos: OpenTelemetry, correlation IDs, distributed logging*
-   - *Aprende: Distributed tracing, observability, correlation*
-
-**Meta:** Implementar tecnologias client-side e APIs avançadas com observabilidade.
+**Meta:** Implementar padrões arquiteturais avançados.
 
 ---
 
@@ -384,26 +396,28 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 
 | **Fase** | **Duração** | **Foco Principal** |
 |----------|-------------|-------------------|
-| **Fase 1** (Módulos 1-3) | 3-4 semanas | Fundamentos C# e ASP.NET Core |
-| **Fase 2** (Módulos 4-7) | 6-8 semanas | Desenvolvimento Intermediário |
-| **Fase 3** (Módulos 8-9) | 2-3 semanas | Testing e Observabilidade |
-| **Fase 4** (Módulos 10-12) | 4-5 semanas | Performance e Documentação |
-| **Fase 5** (Módulos 13-16) | 6-8 semanas | Arquitetura Avançada |
+| **Fase 1** (Módulos 1-3) | 4 semanas | Fundamentos C# e ASP.NET Core |
+| **Fase 2** (Módulos 4-6) | 6 semanas | Dados e Persistência |
+| **Fase 3** (Módulos 7-10) | 8 semanas | Performance e Comunicação |
+| **Fase 4** (Módulos 11-13) | 6 semanas | Real-time e Integração |
+| **Fase 5** (Módulo 14) | 3 semanas | Testing e Qualidade |
+| **Fase 6** (Módulos 15-16) | 8 semanas | Microservices e Cloud |
+| **Fase 7** (Módulos 17-18) | 6 semanas | Arquitetura Avançada |
 
-**Total:** 21-28 semanas (5-7 meses)
+**Total:** 41 semanas (~10 meses)
 
 ## 🎯 **DICAS DE EXECUÇÃO**
 
 - **Complete todos os requisitos** de cada desafio antes de prosseguir
 - **Documente seu aprendizado** - crie um portfólio no GitHub
-- **Pratique TDD** a partir do Módulo 8
-- **Use o roadmap** como checklist - marque cada conceito dominado
-- **Revise periodicamente** - volte aos desafios anteriores para refatorar com novos conhecimentos
+- **Use os tópicos do roadmap** como checklist - marque cada conceito dominado
+- **Implemente testes** a partir do Módulo 5
+- **Revise periodicamente** - refatore projetos anteriores com novos conhecimentos
 
 ## 📚 **RECURSOS COMPLEMENTARES**
 
-- **Microsoft Learn** - Para conceitos específicos do .NET
-- **Pluralsight/Udemy** - Cursos aprofundados
-- **GitHub** - Estudar código de projetos similares
-- **Stack Overflow** - Para dúvidas específicas
-- **Discord/Reddit** - Comunidades .NET para discussões
+- **Microsoft Learn** - Documentação oficial .NET
+- **Pluralsight/Udemy** - Cursos específicos por tecnologia
+- **GitHub** - Estudar projetos open source
+- **Stack Overflow** - Comunidade para dúvidas
+- **Discord/Reddit** - Comunidades .NET para networking
