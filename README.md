@@ -1,4 +1,5 @@
 https://roadmap.sh/aspnet-core
+https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 
 # Plano de Estudos ASP.NET Core Developer com Desafios Práticos
 
