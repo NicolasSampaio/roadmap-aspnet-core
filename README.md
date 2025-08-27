@@ -1,4 +1,5 @@
 https://roadmap.sh/aspnet-core
+
 https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 
 # Plano de Estudos ASP.NET Core Developer com Desafios Práticos
@@ -28,12 +29,10 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 ### **Módulo 2: ASP.NET Core Fundamentals**
 **Conceitos do Roadmap:**
 - ASP.NET Core
-- Web API
 - Minimal APIs
 - Routing
 - Middlewares
 - Filters & Attributes
-- Configurations
 - Options Pattern
 
 **Desafios Práticos:**
@@ -181,9 +180,13 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - NBomber
 
 **Desafios Práticos:**
-1. **Unit Testing** - Implementar testes unitários nos projetos anteriores
-2. **Integration Testing** - Testes de integração com banco de dados
-3. **E2E Testing** - Testes end-to-end das APIs
+1. **Unit Testing** - Implementar testes unitários
+   - *Requisitos: Testes para services, repositories, 80%+ coverage*
+   - *Aprende: xUnit, FluentAssertions, mocking com Moq*
+
+2. **Integration Testing** - Testes de integração  
+   - *Requisitos: Testes com banco real, WebApplicationFactory, cenários E2E*
+   - *Aprende: TestServer, banco de testes, cleanup de dados*
 
 **Meta:** Implementar testes em todos os níveis da aplicação.
 
@@ -201,8 +204,12 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 
 **Desafios Práticos:**
 1. **Logging Service** - Sistema de logs estruturados
-2. **Health Checks** - Implementar health checks nas APIs
-3. **Monitoring** - Monitoramento de aplicações
+   - *Requisitos: Serilog, logs em arquivo/console/base, níveis diferentes*
+   - *Aprende: Structured logging, sinks, enrichers*
+
+2. **Health Checks** - Implementar health checks
+   - *Requisitos: Health checks para banco, APIs externas, custom checks*
+   - *Aprende: Health check middleware, dependency monitoring*
 
 **Meta:** Implementar observabilidade básica nas aplicações.
 
@@ -219,7 +226,8 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 
 **Desafios Práticos:**
 1. **Distributed Caching API** - Cache distribuído com Redis
-2. **Caching** - Implementação de diferentes tipos de cache
+   - *Requisitos: Cache de dados caros, invalidação, Redis como store*
+   - *Aprende: IDistributedCache, Redis, cache strategies*
 
 **Meta:** Otimizar performance com diferentes estratégias de caching.
 
@@ -238,10 +246,13 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - Docker Compose
 
 **Desafios Práticos:**
-1. **Message Queues** - Implementação de filas de mensagem
-2. **Container Dockerfile** - Containerizar aplicação
-3. **Container Docker Compose** - Orquestração de containers
-4. **Real-time Chat API** - Chat em tempo real com message brokers
+1. **Message Queues** - Sistema de filas com RabbitMQ
+   - *Requisitos: Producer/consumer, dead letter queue, retry policies*
+   - *Aprende: RabbitMQ, MassTransit, message patterns*
+
+2. **Container Docker Compose** - Orquestração completa
+   - *Requisitos: API + Redis + RabbitMQ + PostgreSQL em containers*
+   - *Aprende: Docker Compose, networking, volumes, secrets*
 
 **Meta:** Implementar comunicação assíncrona e containerização.
 
@@ -259,10 +270,13 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - API Versioning
 
 **Desafios Práticos:**
-1. **Advanced E-commerce API** - E-commerce com mapeamento de objetos
-2. **Analytics API** - API de analytics com documentação Swagger
-3. **Payment Gateway Integration** - Integração com gateway de pagamento
-4. **API Versioning** - Versionamento de APIs
+1. **Advanced E-commerce API** - E-commerce com AutoMapper
+   - *Requisitos: DTOs mapeados, diferentes perfis de mapeamento*
+   - *Aprende: AutoMapper, DTOs, separation of concerns*
+
+2. **API Versioning** - Versionamento de APIs  
+   - *Requisitos: V1 e V2 da mesma API, diferentes estratégias de versionamento*
+   - *Aprende: API versioning, backward compatibility, deprecation*
 
 **Meta:** Implementar mapeamento de objetos e documentação profissional de APIs.
 
@@ -281,9 +295,13 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - Protobuf-net
 
 **Desafios Práticos:**
-1. **Task Scheduling API** - Agendamento de tarefas
-2. **Notification Service API** - Serviço de notificações com diferentes formatos
-3. **CMS API** - Sistema de gerenciamento de conteúdo
+1. **Task Scheduling API** - Agendamento com HangFire
+   - *Requisitos: Jobs recorrentes, fire-and-forget, delayed jobs, dashboard*
+   - *Aprende: HangFire, background jobs, cron expressions*
+
+2. **Notification Service API** - Multi-formato (JSON/XML/Protobuf)
+   - *Requisitos: Mesmo endpoint retorna diferentes formatos baseado no Accept header*
+   - *Aprende: Content negotiation, different serializers*
 
 **Meta:** Implementar agendamento de tarefas e diferentes formatos de serialização.
 
@@ -298,9 +316,13 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - EasyNetQ
 
 **Desafios Práticos:**
-1. **Microservices Architecture** - Construir aplicação com microserviços
-2. **Microservices E-commerce API** - E-commerce em microserviços
-3. **Event-Driven API** - Arquitetura orientada a eventos
+1. **Microservices E-commerce API** - E-commerce em microserviços
+   - *Requisitos: User Service, Product Service, Order Service, API Gateway*
+   - *Aprende: Service-to-service communication, distributed transactions*
+
+2. **Event-Driven API** - Arquitetura orientada a eventos
+   - *Requisitos: Domain events, event handlers, eventual consistency*
+   - *Aprende: Domain events, event sourcing básico, CQRS introduction*
 
 **Meta:** Implementar arquitetura de microserviços com message bus.
 
@@ -319,9 +341,13 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - Fluid
 
 **Desafios Práticos:**
-1. **CQRS Event Sourcing API** - Implementação CQRS com Event Sourcing
+1. **CQRS Event Sourcing API** - CQRS completo com MediatR
+   - *Requisitos: Commands/Queries separados, Event Store, read/write models*
+   - *Aprende: MediatR, CQRS pattern, event sourcing, FluentValidation*
+
 2. **Multi-tenant API** - API multi-inquilino
-3. **Serverless API** - API serverless
+   - *Requisitos: Tenant isolation, shared schema, tenant-specific features*
+   - *Aprende: Multi-tenancy patterns, data isolation, tenant resolution*
 
 **Meta:** Implementar padrão CQRS e sistemas de templates.
 
@@ -338,11 +364,17 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 - Distributed Tracing
 
 **Desafios Práticos:**
-1. **GraphQL API** - Implementação GraphQL
-2. **API Gateway & Service Mesh** - Gateway e malha de serviços  
-3. **Distributed Tracing API** - Rastreamento distribuído
-4. **Data Processing API** - Processamento de dados
-5. **ML Pipeline API** - Pipeline de Machine Learning
+1. **GraphQL API** - Implementação GraphQL completa
+   - *Requisitos: Queries, mutations, subscriptions, schema stitching*
+   - *Aprende: Hot Chocolate, GraphQL schema design, resolvers*
+
+2. **API Gateway & Service Mesh** - Gateway com roteamento
+   - *Requisitos: Ocelot/YARP, rate limiting, circuit breaker, load balancing*
+   - *Aprende: API Gateway patterns, service mesh, resilience patterns*
+
+3. **Distributed Tracing API** - Observabilidade avançada
+   - *Requisitos: OpenTelemetry, correlation IDs, distributed logging*
+   - *Aprende: Distributed tracing, observability, correlation*
 
 **Meta:** Implementar tecnologias client-side e APIs avançadas com observabilidade.
 
@@ -350,4 +382,28 @@ https://github.com/libre-university/backend-challenges?tab=readme-ov-file
 
 ## 📋 **CRONOGRAMA SUGERIDO**
 
-|
+| **Fase** | **Duração** | **Foco Principal** |
+|----------|-------------|-------------------|
+| **Fase 1** (Módulos 1-3) | 3-4 semanas | Fundamentos C# e ASP.NET Core |
+| **Fase 2** (Módulos 4-7) | 6-8 semanas | Desenvolvimento Intermediário |
+| **Fase 3** (Módulos 8-9) | 2-3 semanas | Testing e Observabilidade |
+| **Fase 4** (Módulos 10-12) | 4-5 semanas | Performance e Documentação |
+| **Fase 5** (Módulos 13-16) | 6-8 semanas | Arquitetura Avançada |
+
+**Total:** 21-28 semanas (5-7 meses)
+
+## 🎯 **DICAS DE EXECUÇÃO**
+
+- **Complete todos os requisitos** de cada desafio antes de prosseguir
+- **Documente seu aprendizado** - crie um portfólio no GitHub
+- **Pratique TDD** a partir do Módulo 8
+- **Use o roadmap** como checklist - marque cada conceito dominado
+- **Revise periodicamente** - volte aos desafios anteriores para refatorar com novos conhecimentos
+
+## 📚 **RECURSOS COMPLEMENTARES**
+
+- **Microsoft Learn** - Para conceitos específicos do .NET
+- **Pluralsight/Udemy** - Cursos aprofundados
+- **GitHub** - Estudar código de projetos similares
+- **Stack Overflow** - Para dúvidas específicas
+- **Discord/Reddit** - Comunidades .NET para discussões
