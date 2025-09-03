@@ -1,0 +1,8 @@
+﻿@NumberGeneratorService_HostAddress = https://localhost:7270
+
+@min=0
+@max=120
+@quantity=4
+GET {{NumberGeneratorService_HostAddress}}/random?min={{min}}&max={{max}}&quantity={{quantity}}
+
+###
