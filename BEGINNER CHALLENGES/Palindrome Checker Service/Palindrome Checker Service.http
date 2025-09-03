@@ -1,0 +1,9 @@
+﻿@PalindromeCheckerService_HostAddress = https://localhost:7032
+
+POST {{PalindromeCheckerService_HostAddress}}/check
+Content-Type: application/json
+
+{
+    "palindrome": "osso"
+}
+###
