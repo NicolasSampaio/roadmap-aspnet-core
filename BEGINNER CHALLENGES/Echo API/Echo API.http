@@ -1,0 +1,9 @@
+﻿@Echo_API_HostAddress = http://localhost:5036
+
+POST {{Echo_API_HostAddress}}/echo
+Content-Type: application/json
+
+{
+    "propriedade": "valor"
+}
+###
